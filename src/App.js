@@ -250,14 +250,9 @@ const App = () => {
   const onDelete = async (itemId) => {
     console.log(`ready to delete grocery item ID: ${itemId}`)
     //find the grocery list item (by id) and remove it from the 'user' object
-    //console.log(`updated 'user' is now: ${JSON.stringify(user)}`);
 
     let userId = user._id;
-    //console.log(`userId: ${userId}`);
-
     let filteredGroceryListItems = user.groceryListItems.filter((currentItem) => currentItem._id != itemId);
-
-    //console.log(`updated groceryListItem array will be: ${JSON.stringify(filteredGroceryListItems)}`);
 
     user.groceryListItems = filteredGroceryListItems;
 
